@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YacineTV Web - شاهد المباريات المباشرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <h1>YacineTV <span>Web</span></h1>
+            </div>
+            <div class="categories-list" id="categories-list">
+                <div class="loader">جاري التحميل...</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <button id="menu-btn" class="menu-btn">☰</button>
+                <h2 id="current-category-title">الرئيسية</h2>
+            </header>
+
+            <div class="channels-grid" id="channels-grid">
+                <div class="welcome-message">
+                    <h3>مرحباً بك في YacineTV Web</h3>
+                    <p>الرجاء اختيار تصنيف من القائمة الجانبية لعرض القنوات.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="video-modal" id="video-modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h3 id="modal-title">تشغيل القناة</h3>
+                <button class="close-btn" id="close-modal-btn">&times;</button>
+            </header>
+            <div class="video-container">
+                <video id="video-player" controls autoplay></video>
+                <div class="video-loader" id="video-loader" style="display: none;">جاري التحميل...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
